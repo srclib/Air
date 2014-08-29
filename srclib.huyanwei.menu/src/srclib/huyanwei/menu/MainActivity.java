@@ -18,6 +18,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 import android.os.Build;
@@ -32,6 +36,27 @@ public class MainActivity extends Activity implements OnItemClickListener,OnItem
 	private Air mAir;
 	private AirView mAirView;
 	
+	AnimationListener mAnimationListener = new AnimationListener() 
+	{
+	      @Override
+	      public void onAnimationStart(Animation animation)
+	      {
+	                   // TODO Auto-generatedmethod stub
+	      }
+	      
+	      @Override
+	      public void onAnimationRepeat(Animation animation)
+	      {
+	                   // TODO Auto-generatedmethod stub
+	      }
+	      
+	      @Override
+	      public void onAnimationEnd(Animation animation)
+	      {
+	                   
+	                   
+	      }	      
+	};	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -65,9 +90,18 @@ public class MainActivity extends Activity implements OnItemClickListener,OnItem
 		super.onRestart();
 	}
 
+	
 	@Override
 	protected void onResume() {
 		// TODO Auto-generated method stub
+		RotateAnimation mRotateAnimation =new RotateAnimation(0, 2*360, Animation.RELATIVE_TO_PARENT, 0.5f, Animation.RELATIVE_TO_PARENT, 0.5f); 
+		mRotateAnimation.setDuration(1000);
+		mRotateAnimation.setFillBefore(false); 
+		mRotateAnimation.setFillAfter(true);
+		mRotateAnimation.setInterpolator(new DecelerateInterpolator());//设置加速度:慢慢减速		
+		mRotateAnimation.setAnimationListener(mAnimationListener);		
+		mAir.startAnimation(mRotateAnimation);
+		
 		super.onResume();
 	}
 
