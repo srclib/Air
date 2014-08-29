@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">srclib.huyanwei.menu</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="air_cmd">浮窗指令</string>
+    <string name="air_1">智能备忘录</string>
+    <string name="air_2">快捷窗口</string>
+	<string name="air_3">截屏编写</string>    
+    <string name="air_4">S 搜索</string>
+    <string name="air_5">随笔窗口</string>
+    
+</resources>

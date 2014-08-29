@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:srclib="http://schemas.android.com/apk/res/srclib.huyanwei.menu"
+    android:id="@+id/container"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    tools:context="srclib.huyanwei.menu.MainActivity"
+    android:background="#FF888888"
+    >
+    
+    <srclib.huyanwei.menu.Air
+        android:id="@+id/framework"
+        android:layout_width="300dp"
+        android:layout_height="300dp" 
+        android:layout_gravity="center_horizontal"
+        srclib:bg="@drawable/airbutton_global_bg"
+        srclib:shaft="@drawable/airbutton_global_center"  
+        srclib:shaft_shadow="@drawable/airbutton_global_center_shadow"
+        srclib:focus="@drawable/airbutton_global_focus"
+        >
+        
+        <srclib.huyanwei.menu.AirView
+            android:id="@+id/airbutton_global_icon_quickmemo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/airbutton_global_icon_quickmemo"
+            srclib:name="@string/air_5"
+        />
+                        
+        <srclib.huyanwei.menu.AirView
+            android:id="@+id/airbutton_global_icon_pinmode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/airbutton_global_icon_pinmode"
+            srclib:name="@string/air_4"
+        />
+        
+        <srclib.huyanwei.menu.AirView
+            android:id="@+id/airbutton_global_icon_multiwindow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/airbutton_global_icon_multiwindow"
+            srclib:name="@string/air_3"             
+        />
+              
+        <srclib.huyanwei.menu.AirView
+            android:id="@+id/airbutton_global_icon_galaxyfinder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/airbutton_global_icon_galaxyfinder"
+            srclib:name="@string/air_2"             
+        />
+        
+        <srclib.huyanwei.menu.AirView
+            android:id="@+id/flashannotation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/airbutton_global_icon_flashannotation"
+            srclib:name="@string/air_1"             
+        />
+        
+        <TextView
+            android:id="@+id/main_selected_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/air_cmd"
+            android:textColor="#FFFFFFFF"
+            android:textSize="12sp" />
+        
+    	</srclib.huyanwei.menu.Air>
+    
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Air">
+        <attr name="bg" format="integer" />
+        <attr name="shaft" format="integer" />
+        <attr name="shaft_shadow" format="integer" />
+         <attr name="focus" format="integer" />
+    </declare-styleable>
+    
+    <declare-styleable name="AirView">
+        <attr name="name" format="string" />
+    </declare-styleable>
+</resources>
